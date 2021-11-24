@@ -7,7 +7,7 @@ import Game from "../components/Game";
 import GameDetail from "../components/GameDetail";
 //Styling and Animation
 import styled from "styled-components";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 //Router Dom
 import { useLocation } from "react-router";
 
@@ -25,7 +25,9 @@ const Home = () => {
 
   return (
     <GameList>
-      {pathId && <GameDetail />}
+      <AnimatePresence>
+        {pathId && <GameDetail pathId={pathId} />}
+      </AnimatePresence>
       <h2>Upcoming Games</h2>
       <Games>
         {upcoming.map((game) => (

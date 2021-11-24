@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import loadDetail from "../actions/detailAction";
 import { Link } from "react-router-dom";
 import { smallImage } from "../util";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Game = ({ name, released, image, id }) => {
   //Load Details Handler
@@ -21,7 +22,7 @@ const Game = ({ name, released, image, id }) => {
       <Link to={`/game/${id}`}>
         <h3>{name}</h3>
         <p>{released}</p>
-        <img src={smallImage(image, 640)} alt={name} />
+        <LazyLoadImage src={smallImage(image, 640)} alt={name} />
       </Link>
     </StyledGame>
   );
