@@ -19,6 +19,7 @@ import starFull from "../img/star-full.png";
 
 const GameDetail = ({ pathId }) => {
   const navigate = useNavigate();
+
   //Exit Detail
   const exitDetailHandler = (e) => {
     const element = e.target;

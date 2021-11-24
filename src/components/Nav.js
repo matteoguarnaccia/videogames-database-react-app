@@ -64,6 +64,17 @@ const StyledNav = styled(motion.div)`
     border-top-right-radius: 0.7rem;
     border-bottom-right-radius: 0.7rem;
   }
+  @media (max-width: 720px) {
+    padding: 3rem 1rem 1rem 1rem;
+    input {
+      width: 90%;
+      border-top-right-radius: 0.7rem;
+      border-bottom-right-radius: 0.7rem;
+    }
+    button {
+      display: none;
+    }
+  }
 `;
 
 const Logo = styled(motion.div)`
